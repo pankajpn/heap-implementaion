@@ -68,8 +68,8 @@ public class Main {
 
         // Helper to extract the minimum element (root) from the heap
         private int extractMin(ArrayList<Integer> heap) {
-            int min = heap.get(0);
-            int last = heap.remove(heap.size() - 1); // Remove the last element
+            int min = heap.getFirst();
+            int last = heap.removeLast(); // Remove the last element
 
             if (!heap.isEmpty()) {
                 heap.set(0, last); // Move last element to root
